@@ -1,7 +1,7 @@
 {
   "name": "atom-toychest",
   "theme": "syntax",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A port of Jackson Gariety's ToyChest Theme",
   "repository": "https://github.com/thibmaek/atom-toychest",
   "license": "MIT",
