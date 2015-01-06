@@ -1,0 +1,13 @@
+{
+  "name": "atom-toychest",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "A port of Jackson Gariety's ToyChest Theme",
+  "repository": "https://github.com/JacksonGariety/toy-chest-theme/",
+  "author": "Jackson Gariety (original)",
+  "contributors": "Thibault Maekelbergh",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  }
+}
