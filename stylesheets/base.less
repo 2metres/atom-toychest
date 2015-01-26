@@ -1,56 +1,67 @@
 @import "syntax-variables";
 
-atom-text-editor {
+atom-text-editor, :host {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
-}
 
-atom-text-editor .gutter {
-  background-color: @syntax-gutter-background-color;
-  color: @syntax-gutter-text-color;
-}
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
 
-atom-text-editor .gutter .line-number.cursor-line {
-  background-color: @syntax-gutter-background-color-selected;
-  color: @syntax-gutter-text-color-selected;
-}
+    .line-number {
 
-atom-text-editor .gutter .line-number.cursor-line-no-selection {
-  color: @syntax-gutter-text-color-selected;
-}
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
 
-atom-text-editor .wrap-guide {
-  color: @syntax-wrap-guide-color;
-}
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
 
-atom-text-editor .indent-guide {
-  color: @syntax-indent-guide-color;
-}
+    }
 
-atom-text-editor .invisible-character {
-  color: @syntax-invisible-character-color;
-}
+  }
 
-atom-text-editor .search-results .marker .region {
-  background-color: transparent;
-  border: @syntax-result-marker-color;
-}
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
 
-atom-text-editor .search-results .marker.current-result .region {
-  border: @syntax-result-marker-color-selected;
-}
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
 
-atom-text-editor.is-focused .cursor {
-  border-color: @syntax-cursor-color;
-}
+  .search-results {
+    .marker {
+      .region {
+        background-color: transparent;
+        border: @syntax-result-marker-color;
+      }
+      &.current-result .region {
+        border: @syntax-result-marker-color-selected;
+      }
+    }
+  }
 
-atom-text-editor.is-focused .selection .region {
-  background-color: @syntax-selection-color;
-}
+  .wrap-guide {
+    color: @syntax-wrap-guide-color;
+  }
 
-atom-text-editor.is-focused .line-number.cursor-line-no-selection,
-atom-text-editor.is-focused .line.cursor-line {
-  background-color: #1a2631;
+  &.is-focused {
+    .cursor {
+      border-color: @syntax-cursor-color;
+    }
+
+    .line.cursor-line,
+    .line-number.cursor-line-no-selection {
+      background-color: #1a2631;
+    }
+
+    .selection .region {
+      background-color: @syntax-selection-color;
+    }
+  }
+
 }
 
 .comment {
