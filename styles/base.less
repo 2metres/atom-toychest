@@ -8,7 +8,6 @@ atom-text-editor, :host {
     background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
 
-    .line,
     .line-number {
 
       &.cursor-line {
@@ -48,7 +47,7 @@ atom-text-editor, :host {
     color: @syntax-wrap-guide-color;
   }
 
-  &.is-focused {
+  .is-focused {
     .cursor {
       border-color: @syntax-cursor-color;
     }
@@ -57,9 +56,13 @@ atom-text-editor, :host {
     .line-number.cursor-line-no-selection {
       background-color: #1a2631;
     }
+  }
 
-    .selection .region {
-      background-color: @syntax-selection-color;
+  .has-selection {
+    .selection {
+      .region {
+        background-color: @syntax-selection-color;
+      }
     }
   }
 
